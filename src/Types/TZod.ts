@@ -1,3 +1,3 @@
 export type TZod<T> = {
-  safeParse(obj: T): boolean;
+  safeParse(obj: T): { success: boolean };
 };
