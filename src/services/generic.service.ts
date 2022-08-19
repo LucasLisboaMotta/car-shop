@@ -5,13 +5,13 @@ import CustomError, {
   minCharacters,
   notFound,
 } from '../helpers/CustomError';
-import { TZod } from '../Types/TZod';
+import { IZod } from '../interfaces/IZod';
 
 export default abstract class GenericService<T> implements IService<T> {
   private _model: GenericModel<T>;
-  private _zod: TZod<T>;
+  private _zod: IZod<T>;
 
-  constructor(model: GenericModel<T>, zod: TZod<T>) {
+  constructor(model: GenericModel<T>, zod: IZod<T>) {
     this._model = model;
     this._zod = zod;
   }
